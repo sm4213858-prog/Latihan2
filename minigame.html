@@ -20,11 +20,14 @@
   
   <!--area game -->
   <div class="kartu-profil">
-    <img id="foto-kucing"src="kucing1.jpg" alt="" />
+    <img id="foto-kucing" src="kucing1.jpg" alt="" />
     <h2 id="status-kucing">kucing kurus😿</h2>
     <p>porsi makan: <b id="teks-porsi">0</b></p>
     
-    <button onclick="beriMakan()">beri makan (+1)</button>
+    <p>
+      <input type="number" id="input-makanan" value="1">
+      <button onclick="beriMakan()">beri makan</button>
+    </p>
     <button onclick="ajakMain()">ayo main (-1)</button>
     
     <p>
