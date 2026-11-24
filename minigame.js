@@ -2,9 +2,18 @@
 // dengan nilai awal nol (0)
 let porsi = 0
 
+// siapkan aset suara di variabel 
+let suaraMakan = new Audio("makan.mp3")
+let suaramain = new Audio("main.mp3")
+let suarariset = new Audio("riset.mp3")
+
 function beriMakan() {
+  // efek suara makan 
+  suaraMakan.currentTime = 0
+  suaraMakan.play()
+  
   // 1. ambil teks dari input angka kotak teks
-   let teksinput =document.getElementById('input-makanan').value
+  let teksinput = document.getElementById('input-makanan').value
   
   // 2. ubah string menjadi angka
   let jumlahMakanan = Number(teksinput)
@@ -17,6 +26,10 @@ function beriMakan() {
 
 // fusngsi untuk mengajak main kucing (porsi dikurangi 1)
 function ajakMain() {
+  // efek suara ajakMain
+ suaramain.currentTime = 0
+  suaramain.play()
+  
   // mengurangi porsi 1 tapi cegah jangan sampai negatif 
   if (porsi > 0) {
     porsi = porsi - 1
@@ -26,7 +39,10 @@ function ajakMain() {
 }
 
 function reset() {
-  porsi= 0
+  // efek suara reset
+ suarariset.currentTime = 0
+  suarariset.play()
+  porsi = 0
   
   updateTampilan()
 }
